@@ -1,5 +1,5 @@
 provider "aws" {
-  region = variable.region
+  region = var.region
 }
 
 # Path: 1-vpc.tf
