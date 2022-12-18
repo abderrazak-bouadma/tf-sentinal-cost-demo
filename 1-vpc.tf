@@ -28,9 +28,8 @@ resource "aws_subnet" "tf_demo_subnet" {
 resource "aws_instance" "tf_demo_ec2" {
   ami = "ami-0c55b159cbfafe1f0"
   instance_type = var.instance_type
-  instance_name = var.instance_name
   subnet_id = aws_subnet.tf_demo_subnet.id
   tags = {
-    Name = "tf_demo_ec2"
+    Name = var.instance_name
   }
 }
