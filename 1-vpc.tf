@@ -17,7 +17,7 @@ resource "aws_vpc" "tf_demo_vpc" {
 # Path: 2-subnets.tf
 resource "aws_subnet" "tf_demo_subnet" {
   vpc_id = aws_vpc.tf_demo_vpc.id
-  cidr_block = "172.1.0.0/24"
+  cidr_block = "172.0.0.0/24"
     availability_zone = "us-east-1a"
     tags = {
       Name = "tf_demo_subnet"
